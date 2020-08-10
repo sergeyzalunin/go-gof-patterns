@@ -23,3 +23,18 @@ func TestSendEmail(t *testing.T) {
 		t.Errorf("by creating email via emailbuilder wants to see \n'%s' got \n'%s'", originEmail, got)
 	}
 }
+
+func TestPanic(t *testing.T) {
+	defer func() {
+		if r := recover(); r == nil  {
+			t.Error("We want to see panic")
+		}
+	}()
+
+	SendEmail(func(b *EmailBuild){
+		_ = b.From("testgmail.com").
+			To("friend@gmail.com").
+			Subject("It is a test email").
+			Body("This is a body").email
+	})
+}

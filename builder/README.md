@@ -1,12 +1,14 @@
+## **Builder**
+When piecewise object construction is complicated, provide an API for doing it succinctly
+
 ## Motivation to use builder
 
 * Some objects are simple and can be created in a single constructor call
 * Other objects require a lot of ceremony to create
 * Having a factory function with 10 arguments is not productive
 * Builder provides an API for constructing an object step-by-step
-* When piecewise object construction is complicated, provide an API for doing it succinctly
 
-# Summary
+## Summary
 
 * A builder is a separate component used for building an object
 * To make builder fluent, return the receiver - allows chaining
