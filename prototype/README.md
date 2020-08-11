@@ -1,15 +1,18 @@
 ## **Prototype**
-When piecewise object construction is complicated, provide an API for doing it succinctly
+A partially or fully initialized object that you copy (clone) and make use of
 
 ## Motivation to use prototype
 
-* Some objects are simple and can be created in a single constructor call
-* Other objects require a lot of ceremony to create
-* Having a factory function with 10 arguments is not productive
-* Builder provides an API for constructing an object step-by-step
+* Complicated objects (e.g., cars) aren't designed from scratch
+    * The reiterate existing designs
+* An existing (partially or fully constructed) design is a Prototype
+* We make a copy of the prototype and customize it
+    * Requires 'deep copy' support
+* We make the cloning convenient (e.g via a Factory)
 
 ## Summary
 
-* A builder is a separate component used for building an object
-* To make builder fluent, return the receiver - allows chaining
-* Different facets of an object can be buit with different builders working in tandem via a common struct
+* To implement a prototype, partially construct an object and store it somewhere
+* Deep copy the prototype
+* Customize the resulting instance
+* A prototype factory provides a convenient API for using prototypes
