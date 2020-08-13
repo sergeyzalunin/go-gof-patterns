@@ -2,9 +2,9 @@ package functionfactory
 
 // Person ...
 type Person struct {
-	name string
-	age int 
-	eyeCount int 
+	name     string
+	age      int
+	eyeCount int
 }
 
 // NewPerson is a factory method

@@ -46,7 +46,7 @@ func sendMailImpl(email *email) {
 type build func(*EmailBuild)
 
 // SendEmail is ....
-func SendEmail(action build)  {
+func SendEmail(action build) {
 	builder := EmailBuild{}
 	action(&builder)
 	sendMailImpl(&builder.email)

@@ -3,23 +3,22 @@ package factorygenerator
 // Employee ...
 type Employee struct {
 	Name, Position string
-	AnnualIncome int
+	AnnualIncome   int
 }
 
 // NewEmployeeFactory is functional approach
 func NewEmployeeFactory(position string,
-	annualIncome int) func (name string) *Employee{
-		return func(name string) *Employee {
-			return &Employee{name, position, annualIncome}
-		}
+	annualIncome int) func(name string) *Employee {
+	return func(name string) *Employee {
+		return &Employee{name, position, annualIncome}
 	}
-
+}
 
 // EmployeeFactory to show structural approach
 type EmployeeFactory struct {
-	Position string
+	Position     string
 	AnnualIncome int
-}	
+}
 
 // Create an employee
 func (f *EmployeeFactory) Create(name string) *Employee {
@@ -27,6 +26,6 @@ func (f *EmployeeFactory) Create(name string) *Employee {
 }
 
 // NewEmployeeFactory2 create an employee factory structure
-func NewEmployeeFactory2(position string, annualIncome int) *EmployeeFactory  {
+func NewEmployeeFactory2(position string, annualIncome int) *EmployeeFactory {
 	return &EmployeeFactory{position, annualIncome}
 }
