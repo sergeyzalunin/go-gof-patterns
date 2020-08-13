@@ -3,16 +3,16 @@ package builder
 import "testing"
 
 var originEmail = email{
-	from:	"test@gmail.com",
-	to:		"friend@gmail.com",
+	from:    "test@gmail.com",
+	to:      "friend@gmail.com",
 	subject: "It is a test email",
-	body:	"This is a body",
+	body:    "This is a body",
 }
 
 func TestSendEmail(t *testing.T) {
 	var got email
 
-	SendEmail(func(b *EmailBuild){
+	SendEmail(func(b *EmailBuild) {
 		got = b.From("test@gmail.com").
 			To("friend@gmail.com").
 			Subject("It is a test email").
@@ -26,12 +26,12 @@ func TestSendEmail(t *testing.T) {
 
 func TestPanic(t *testing.T) {
 	defer func() {
-		if r := recover(); r == nil  {
+		if r := recover(); r == nil {
 			t.Error("We want to see panic")
 		}
 	}()
 
-	SendEmail(func(b *EmailBuild){
+	SendEmail(func(b *EmailBuild) {
 		_ = b.From("testgmail.com").
 			To("friend@gmail.com").
 			Subject("It is a test email").

@@ -9,7 +9,7 @@ type Person interface {
 
 type person struct {
 	name string
-	age int
+	age  int
 }
 
 // NewPerson ...

@@ -11,4 +11,7 @@ Ways of controlling how an object is constructed
 ## Factory
 When it's easier to copy an existing object to fully initialize a new one
 
+## Singleton
+A component which is instantiated only once
+
 P.s. The original course is [here](https://www.udemy.com/course/design-patterns-go) extended with tests by me

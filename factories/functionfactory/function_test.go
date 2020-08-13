@@ -4,14 +4,14 @@ import "testing"
 
 func TestFactoryFunction(t *testing.T) {
 	testCases := []struct {
-		person	Person		
+		person Person
 	}{
 		{
-			person: Person {
-				name: "Arnold",
-				age: 75,
+			person: Person{
+				name:     "Arnold",
+				age:      75,
 				eyeCount: 2,
-			},			
+			},
 		},
 	}
 	for _, tC := range testCases {

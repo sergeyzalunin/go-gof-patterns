@@ -3,7 +3,7 @@ package proxyfactory
 // Employee ...
 type Employee struct {
 	Name, Position string
-	AnnualIncome int
+	AnnualIncome   int
 }
 
 const (

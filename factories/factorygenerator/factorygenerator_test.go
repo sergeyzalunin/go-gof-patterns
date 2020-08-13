@@ -3,30 +3,30 @@ package factorygenerator
 import "testing"
 
 type testCase struct {
-	desc string
+	desc           string
 	name, position string
-	annualIncome int
-	want Employee
+	annualIncome   int
+	want           Employee
 }
 
-var testCases = []testCase {
+var testCases = []testCase{
 	{
-		desc: "Arnold developer",
-		name: "Arnold",
-		position: "developer",
+		desc:         "Arnold developer",
+		name:         "Arnold",
+		position:     "developer",
 		annualIncome: 55000,
-		want: Employee {
+		want: Employee{
 			"Arnold",
 			"developer",
 			55000,
 		},
 	},
 	{
-		desc: "Genry manager",
-		name: "Genry",
-		position: "manager",
+		desc:         "Genry manager",
+		name:         "Genry",
+		position:     "manager",
 		annualIncome: 15000,
-		want: Employee {
+		want: Employee{
 			"Genry",
 			"manager",
 			15000,

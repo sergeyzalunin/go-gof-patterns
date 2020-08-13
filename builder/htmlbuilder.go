@@ -3,7 +3,7 @@ package builder
 // HTMLBuilder constructs html elements
 type HTMLBuilder struct {
 	rootName string
-	root *HTMLElement
+	root     *HTMLElement
 }
 
 // NewHTMLBuilder serves to construct a new object
