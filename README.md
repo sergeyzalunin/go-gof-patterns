@@ -20,4 +20,7 @@ Getting the interface you want from the interface you have
 ## Builder
 Connecting components together through abstractions
 
+## Composition
+Treating individual and aggreage objects uniformly
+
 P.s. The original course is [here](https://www.udemy.com/course/design-patterns-go) extended with tests by me
