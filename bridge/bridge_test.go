@@ -1,6 +1,7 @@
 package bridge
 
 import (
+	"github.com/sergeyzalunin/go-gof-patterns/helper"
 	"io/ioutil"
 	"os"
 	"reflect"
@@ -113,7 +114,7 @@ func TestCircle_Draw(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := getPrintOutput(func() {
+			got := helper.GetPrintOutput(func() {
 				tt.c.Draw()
 			})
 			assert.Equal(t, tt.want, got)
@@ -152,17 +153,4 @@ func TestCircle_Resize(t *testing.T) {
 			}
 		})
 	}
-}
-
-func getPrintOutput(testingFunc func()) string {
-	rescueStdout := os.Stdout
-	reaader, writer, _ := os.Pipe()
-	os.Stdout = writer
-
-	testingFunc()
-
-	writer.Close()
-	out, _ := ioutil.ReadAll(reaader)
-	os.Stdout = rescueStdout
-	return string(out)
 }
