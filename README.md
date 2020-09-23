@@ -23,4 +23,7 @@ Connecting components together through abstractions
 ## Composition
 Treating individual and aggreage objects uniformly
 
+## Decorator
+Adding behavior without altering the type itself
+
 P.s. The original course is [here](https://www.udemy.com/course/design-patterns-go) extended with tests by me
