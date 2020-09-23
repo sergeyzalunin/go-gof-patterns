@@ -11,4 +11,6 @@ Facilitates the addition of behaviors to individual objects through embedding
 
 ## Summary
 
-*
+* A decorator embeds the decorated object
+* Adds utility fields and methods to augment the object's features
+* Often used to emulate multiple inheritance (may require extra work)

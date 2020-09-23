@@ -1,11 +1,10 @@
 package bridge
 
 import (
-	"github.com/sergeyzalunin/go-gof-patterns/helper"
-	"io/ioutil"
-	"os"
 	"reflect"
 	"testing"
+
+	"github.com/sergeyzalunin/go-gof-patterns/helper"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -29,7 +28,7 @@ func TestVectorRenderer_RenderCircle(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := getPrintOutput(func() {
+			got := helper.GetPrintOutput(func() {
 				tt.v.RenderCircle(tt.args.radius)
 			})
 			assert.Equal(t, tt.want, got)
@@ -56,7 +55,7 @@ func TestRasterRenderer_RenderCircle(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := getPrintOutput(func() {
+			got := helper.GetPrintOutput(func() {
 				tt.v.RenderCircle(tt.args.radius)
 			})
 			assert.Equal(t, tt.want, got)
