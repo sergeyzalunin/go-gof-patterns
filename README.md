@@ -26,4 +26,7 @@ Treating individual and aggreage objects uniformly
 ## Decorator
 Adding behavior without altering the type itself
 
+## Facade
+Exposing several components through a single interface
+
 P.s. The original course is [here](https://www.udemy.com/course/design-patterns-go) extended with tests by me
